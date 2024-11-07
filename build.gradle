@@ -1,6 +1,6 @@
 plugins {
     id 'org.springframework.boot' version '3.0.2'
-    //id 'io.spring.dependency-management' version '1.1.0'
+    id 'io.spring.dependency-management' version '1.1.0' // 의존성 버전 자동 관리 플러그인.
     id 'java'
 }
 
@@ -8,8 +8,8 @@ group = 'hello'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
-//스프링 부트 외부 라이브러리 버전 변경
-//ext['tomcat.version']='10.1.4'
+//스프링 부트 외부 라이브러리 버전 변경(기존 10.1.5)
+ext['tomcat.version']='10.1.4'
 
 configurations {
     compileOnly {
@@ -23,6 +23,7 @@ repositories {
 
 
 dependencies {
+/*
 
     //1. 라이브러리 직접 지정
     //스프링 웹 MVC
@@ -40,6 +41,7 @@ dependencies {
     implementation 'org.slf4j:jul-to-slf4j:2.0.6'
     //YML 관련
     implementation 'org.yaml:snakeyaml:1.33'
+*/
 
 /*
     //2. 스프링 부트 라이브러리 버전 관리
@@ -59,11 +61,8 @@ dependencies {
     //YML 관련
     implementation 'org.yaml:snakeyaml'
 */
-
-/*
     //3. 스프링 부트 스타터
     implementation 'org.springframework.boot:spring-boot-starter-web'
-*/
 }
 
 tasks.named('test') {
